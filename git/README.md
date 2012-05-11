@@ -1,6 +1,11 @@
 Git Reference
 =============
 
-## Useful config
+## Useful config that I constantly forget
 
-$ git config --global color.ui true
+Enable colors
+
+    $ git config --global color.ui true
+
+Rename a branch
+    $ git branch -m old_branch new_branch
