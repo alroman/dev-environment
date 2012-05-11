@@ -1,6 +1,15 @@
 Latex Reference
 ===============
 
+## item list
+
+    \begin{itemize}
+     \item my_first_item 
+     \item my_second_item
+     \item my_third_item
+    \end{itemize}
+
+
 ## creating a table
 
     {% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -31,10 +40,16 @@ Latex Reference
     {% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
     \begin{figure}[htb!]
       \centering
-      \includegraphics[width=0.5\textwidth]{image.png}
-      \caption{Ring Oscillator}
-      \label{latch}
+      \includegraphics[width=0.5\textwidth]{my_image.png}
+      \caption{my_caption}
+      \label{my_label}
     \end{figure}
     }% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+## unformatted text
 
+    \begin{verbatim}
+    <code>
+      <is>verbatim</is>
+    </code>
+    \end{verbatim}
