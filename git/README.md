@@ -1,7 +1,7 @@
 Git Reference
 =============
 
-## Useful config that I constantly forget
+## Useful git commands that I constantly forget
 
 Enable colors
 
