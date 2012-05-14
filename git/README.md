@@ -1,9 +1,14 @@
 Git Reference
 =============
 
-## Useful config
+## Useful git commands that I constantly forget
+Enable colors
 
-$ git config --global color.ui true
+    $ git config --global color.ui true
+
+Rename a branch
+
+    $ git branch -m old_branch new_branch
 
 ## Git commit messages
 
@@ -20,5 +25,4 @@ Some good references for this:
 http://ablogaboutcode.com/2011/03/23/proper-git-commit-messages-and-an-elegant-git-history/
 
 https://github.com/erlang/otp/wiki/Writing-good-commit-messages
-
 
