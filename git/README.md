@@ -10,15 +10,17 @@ Rename a branch
 
     $ git branch -m old_branch new_branch
 
+
 ## Git commit messages
 
-Idea is to promote better communication between developers, seed up the reviewing process and get a good looking git log.  Your git commit message should be easy to read and effectively commmunicate what your code changes do.  
+A good way to format your git messages is to have a one liner that explains what your commit does, followed by a greater explanation that communicates in more details what your change fixes.  Convey a justification for your solution.
 
 The format should be as follows:
 
     CCLE-1234 - one line description of what your commit does 
 
-    a more detailed description of what your commit does.  some justification for your choice solution
+    a more detailed description of what your commit does.  with
+    some justification for your choice solution
 
 Some good references for this:
 
