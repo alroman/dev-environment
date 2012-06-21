@@ -37,3 +37,5 @@ Notice that we set the 's' sticky bit.  This will allow any folders we create in
 Where user is your username.
     
 For more reference on this, go here: http://superuser.com/questions/268987/cant-create-any-folder-in-htdocs-on-ubuntu
+
+@todo: changing the www data folder
