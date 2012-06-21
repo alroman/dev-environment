@@ -5,6 +5,10 @@ Git Reference
 Enable colors
 
     $ git config --global color.ui true
+    
+Only push current branch to remote
+
+    $ git config --global push.default current
 
 Rename a branch
 
