@@ -1,0 +1,33 @@
+#!/bin/bash
+
+txtrst='\e[0m'    # Text Reset
+txtblu='\e[0;34m' # Blue
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldred='\e[1;31m' # Red
+
+if [ "$(id -u)" != "0" ]; then
+	echo -e "${bldred} [x] You need to run this as root. ${txtrst}"
+	exit 1
+fi
+
+if [ "$1" = "" ]; then
+	echo -e "${bldred} [x] Nothing to do.${txtrst}"
+	exit 1
+fi
+
+if [ "$1" = "start" ]; then
+	echo -e "${bldgrn} [>] Starting dev environment.${txtrst}"
+	echo -e $txtblu
+	service apache2 start
+	service mysql start
+	echo -e $txtrst
+fi
+
+if [ "$1" = "stop" ]; then
+	echo -e "${bldylw} [>] Stopping dev environment.${txtrst}"
+	echo -e $txtblu
+	service apache2 stop
+	service mysql stop
+	echo -e $txtrst
+fi
