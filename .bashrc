@@ -63,7 +63,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 if [ "$color_prompt" = yes ]; then
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 # Modify prompt to display git info, also shows current directory 
-    PS1='[\[\033[01;32m\]\u\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]$(declare -F __git_ps1 &>/dev/null && __git_ps1 " \[\e[0;34m\](%s)\[\e[0m\]")]\$ '
+    PS1='[\[\033[01;37m\]\u\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]$(declare -F __git_ps1 &>/dev/null && __git_ps1 " \[\e[0;34m\](%s)\[\e[0m\]")]\$ '
 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
