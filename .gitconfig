@@ -1,0 +1,34 @@
+[user]
+	name = Alfonso Roman
+
+# Add fancy colors
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+		ui = true
+[color "branch"]
+        current = blue reverse
+        local = blue
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+
+# When you push, push current branch
+[push]
+	default = current
+
+# Some useful aliases
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
