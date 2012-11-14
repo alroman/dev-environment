@@ -1,0 +1,15 @@
+# Netbeans shortcut for Ubuntu
+# It will give you a much better icon
+#
+# Located in:
+# ~/.netbeans/7.2.1/netbeans.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Name=NetBeans IDE 7.2.1
+Comment=The Smarter Way to Code
+Exec=/usr/bin/netbeans
+Icon=~/.netbeans/netbeans-logo-box.png
+Categories=Application;Development;Java;IDE
+Version=1.0
+Type=Application
+Terminal=0
