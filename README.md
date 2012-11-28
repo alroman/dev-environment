@@ -17,6 +17,9 @@ Rename a branch
 
     $ git branch -m old_branch new_branch
 
+Pull a remote branch so that it overrides your local branch.  This happens when you do git push <branch> --force
+    
+    $ git reset --hard origin/<branch>
 
 ## Git commit messages
 
