@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# default list name
+LIST=".bcd_list"
+
+# Check if we have a list
+if [ ! -f ~/$LIST ]
+then
+    # If not, then create it
+    touch ~/$LIST
+fi
+
+# If no argument is provided, then show list contents
+if [ $# -lt 1 ]
+then
+    # Check if anything to display
+    if [ `cat ~/$LIST | wc -l` -eq 0 ]
+    then
+        echo "<list is empty>"
+    else
+    # Display list
+        cat ~/$LIST
+    fi
+    # Exit
+    exit 0
+fi
+
+# Delete the list
+if [ "$1" = "clear" ]; then
+    rm ~/$LIST
+    exit 0
+fi
+# Show the list
+if [ "$1" = "list" ]; then
+    cat ~/$LIST
+    exit 0
+fi
+
+# Check if only a single argument was given
+if [ $# -eq 1 ]; then
+
+    # Retrieve the bookmark    
+    mark=`cat ~/$LIST | grep $1:`
+    
+    # Check if it's valid
+    if [ ! -z $mark ]; then
+        # Go to the bookmark
+        echo $mark | sed -e "s/$1://"
+       # pwd
+    else
+        # We don't have that bookmark
+        echo "<invalid bookmark>"
+    fi
+    
+    # Prevent further propagation
+    exit 1
+fi
+
+# Add a bookmark
+if [ "$1" = "add" ]
+then
+    # @todo: make sure we have two arguments
+    if [ "$3" = "." ]; then
+        echo "$2:`pwd`" >> ~/$LIST
+    else
+        echo "$2:$3" >> ~/$LIST
+    fi
+fi
+
+# END
